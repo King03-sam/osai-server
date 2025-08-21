@@ -12,7 +12,7 @@ app.post("/generate-image", async (req, res) => {
     const { prompt } = req.body;
 
     const response = await fetch(
-      "https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5",
+      "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1",
       {
         method: "POST",
         headers: {
@@ -44,3 +44,4 @@ app.get("/ping", (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
